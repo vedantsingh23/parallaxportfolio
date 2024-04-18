@@ -18,3 +18,9 @@ document.addEventListener('scroll', function() {
     mount1.style.marginBottom = -value * 1.1 + 'px'
     mount2.style.marginBottom = -value * 1.2 + 'px'
 })
+
+document.getElementById('aboutLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    var targetElement = document.getElementById('ab');
+    targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to target element smoothly
+});

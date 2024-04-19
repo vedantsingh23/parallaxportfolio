@@ -172,7 +172,7 @@ margin: 0 2rem;
     }
 
 .res {
-    position:fixed;
+    position:absolute;
     top: 60%;
     left: 15%;
     transform: translate(-50%, -50%);
@@ -180,4 +180,227 @@ margin: 0 2rem;
     font-size: 80px;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     text-shadow: 0 0 5px #3B3291, 0 0 10px #3B3291, 0 0 15px #3B3291; 
+}
+
+
+/* Styling for the gallery container */
+.gallery {
+    display: flex; 
+    justify-content: center;
+}
+
+/* Styling for the images container within the gallery */
+.images {
+    display: grid; 
+    grid-template-columns: repeat(3, 600px); 
+}
+
+/* Styling for the individual images */
+.murci {
+    overflow: hidden; 
+    position: relative; 
+}
+
+.murci img {
+    width: 50%; 
+    height: 50%; 
+    transition: transform 0.3s ease-in-out; 
+    margin-top: 100px; 
+}
+
+/* Hover effect on images */
+.murci:hover img{
+    transform: scale(1.1); 
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .gallery {
+        padding: 10px; 
+    }
+    .images {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Media query for even smaller screens */
+@media only screen and (max-width: 480px) {
+    .gallery {
+        padding: 5px;
+    }
+    .images {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Styling for the full-screen image view */
+.images1 {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+/* Styling for the individual full-screen image */
+.imgg {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%; /* Maximum width of the image container */
+    max-height: 50%; 
+}
+
+/* Styling for the full-screen image itself */
+.murcii img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+    display: block;
+}
+
+/* Styling for the close button */
+.close {
+    position: absolute; 
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect on the close button */
+.close:hover,
+.close:focus {
+    color: #f24b80;
+    text-decoration: none; /* Remove default underline */
+    cursor: pointer; /* Cursor style */
+}
+
+/* Styling for the previous and next navigation buttons */
+.previous,
+.next {
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    width: auto; 
+    padding: 16px; 
+    margin-top: -22px; 
+    color: white;
+    font-weight: bold; 
+    font-size: 20px; 
+    transition: 0.6s ease; 
+    border-radius: 0 3px 3px 0; 
+    background-color: rgba(90, 12, 224, 0.5); 
+}
+
+/* Styling for the previous button */
+.previous {
+    left: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Styling for the next button */
+.next {
+    right: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Initially hide previous and next buttons */
+.previous,
+.next {
+    display: none;
+}
+
+/* Show previous and next buttons on hover */
+.imgg:hover .previous,
+.imgg:hover .next {
+    display: block;
+}
+
+/* Hover effect on previous and next buttons */
+.previous:hover,
+.next:hover {
+    background-color: #f24b80; 
+}
+
+/* Hide previous and next buttons when not hovering over the image */
+.imgg:not(:hover) .previous,
+.imgg:not(:hover) .next {
+    display: none;
+}
+
+.pic{
+    color: #c0d5ff;
+    text-shadow: 0 0 5px #3B3291, 0 0 10px #3B3291, 0 0 15px #3B3291; 
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#murcielago{
+    background: linear-gradient(to top, #eb5abb 1%, #c32c2c);
+
+}
+
+#projects {
+position: relative;
+background: linear-gradient(to top, #3B3291 1%, #eb5abb);
+}
+
+.color-container {
+border-color: rgb(163, 163, 163);
+background: linear-gradient(to top, #eb5abb 1%, #3B3291);
+}
+
+.project-img {
+border-radius: 2rem;
+width: 90%;
+height: 100%;
+}
+
+.project-title {
+margin: 1rem;
+color: black;
+}
+
+.project-btn {
+color: black;
+border-color: rgb(163, 163, 163);
+}
+
+.pro{
+    color: #c0d5ff;
+    text-shadow: 0 0 5px #3B3291, 0 0 10px #3B3291, 0 0 15px #3B3291; 
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+#contact{
+    background: linear-gradient(to top, #ff2e70 1%, #3B3291);
+
+}
+
+.container p{
+    font-size: 20px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablet devices */
+    /* You can modify styles for different sections here */
+}
+
+/* Mobile styles (max width 480px) */
+@media only screen and (max-width: 480px) {
+    /* Adjustments for mobile devices */
+    /* You can modify styles for different sections here */
 }
